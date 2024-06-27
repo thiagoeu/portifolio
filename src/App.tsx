@@ -1,3 +1,9 @@
+import { Home } from "./pages";
+
 export const App = () => {
-  return <h1>olá</h1>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 };
