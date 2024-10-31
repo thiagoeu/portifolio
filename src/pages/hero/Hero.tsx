@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
@@ -6,6 +7,10 @@ export const Hero = () => {
       <Link to="/projetos">Projetos</Link>
       <Link to="/habilidades">Habilidades</Link>
       <Link to="/contato">Contato</Link>
+
+      <Button variant="contained" color="primary">
+        Teste
+      </Button>
     </div>
   );
 };
