@@ -11,7 +11,7 @@ export const Hero = () => {
       <Link to="/contato">Contato</Link>
 
       <Button variant="contained" color="primary" onClick={toggleTheme}>
-        Teste
+        Alterar Tema
       </Button>
     </Box>
   );

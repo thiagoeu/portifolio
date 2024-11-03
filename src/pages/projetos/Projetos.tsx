@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 export const Projetos = () => {
@@ -7,9 +8,9 @@ export const Projetos = () => {
     history("/pagina-inicial");
   };
   return (
-    <div>
+    <Box>
       <h1>Projetos</h1>
       <button onClick={handleClick}>Pagina inicial</button>
-    </div>
+    </Box>
   );
 };
