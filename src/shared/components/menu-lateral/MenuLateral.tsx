@@ -123,7 +123,7 @@ export const MenuLateral: React.FC<IMenuLateral> = ({ children }) => {
                 <ListItemText primary="Contato" />
               </ListItemButton>
             </ListItem>
-            {/* Botão de alternância de tema dentro do Drawer */}
+
             <ListItem disablePadding>
               <ListItemButton
                 onClick={() => {
