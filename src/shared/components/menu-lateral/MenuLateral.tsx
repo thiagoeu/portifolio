@@ -9,6 +9,7 @@ import {
   Drawer,
   List,
   ListItem,
+  ListItemButton,
   ListItemText,
   Typography,
 } from "@mui/material";
@@ -60,6 +61,9 @@ export const MenuLateral: React.FC<IMenuLateral> = ({ children }) => {
           <Box
             sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}
           >
+            <Button component={Link} to="/" color="inherit">
+              Home
+            </Button>
             <Button component={Link} to="/habilidades" color="inherit">
               Habilidades
             </Button>
@@ -83,36 +87,53 @@ export const MenuLateral: React.FC<IMenuLateral> = ({ children }) => {
       <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerToggle}>
         <Box sx={{ width: 250 }}>
           <List>
-            <ListItem
-              component={Link}
-              to="/habilidades"
-              onClick={handleDrawerToggle}
-            >
-              <ListItemText primary="Habilidades" />
+            <ListItem disablePadding>
+              <ListItemButton
+                component={Link}
+                to="/"
+                onClick={handleDrawerToggle}
+              >
+                <ListItemText primary="Home" />
+              </ListItemButton>
             </ListItem>
-            <ListItem
-              component={Link}
-              to="/projetos"
-              onClick={handleDrawerToggle}
-            >
-              <ListItemText primary="Projetos" />
+            <ListItem disablePadding>
+              <ListItemButton
+                component={Link}
+                to="/habilidades"
+                onClick={handleDrawerToggle}
+              >
+                <ListItemText primary="Habilidades" />
+              </ListItemButton>
             </ListItem>
-            <ListItem
-              component={Link}
-              to="/contato"
-              onClick={handleDrawerToggle}
-            >
-              <ListItemText primary="Contato" />
+            <ListItem disablePadding>
+              <ListItemButton
+                component={Link}
+                to="/projetos"
+                onClick={handleDrawerToggle}
+              >
+                <ListItemText primary="Projetos" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton
+                component={Link}
+                to="/contato"
+                onClick={handleDrawerToggle}
+              >
+                <ListItemText primary="Contato" />
+              </ListItemButton>
             </ListItem>
             {/* Botão de alternância de tema dentro do Drawer */}
-            <ListItem
-              onClick={() => {
-                toggleTheme();
-                handleDrawerToggle();
-              }}
-            >
-              <ListItemText primary="Alternar Tema" />
-              <Contrast />
+            <ListItem disablePadding>
+              <ListItemButton
+                onClick={() => {
+                  toggleTheme();
+                  handleDrawerToggle();
+                }}
+              >
+                <ListItemText primary="Alternar Tema" />
+                <Contrast />
+              </ListItemButton>
             </ListItem>
           </List>
         </Box>
